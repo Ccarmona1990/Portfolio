@@ -1,5 +1,50 @@
-
-
 main {
-  height: calc(100vh - (4rem + 4rem));
+  //max-height: calc(100% - (4rem + 4rem));
+  height: 100%;
+}
+
+.subheading {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.list-inline-item {
+  list-style-type: none;
+  display: block;
+  margin: 5px 5px;
+}
+
+.list-inline {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2rem 0px;
+}
+
+.fa-ul {
+  padding: 2rem 0px;
+}
+
+.project-img {
+  width: 20rem;
+  border-radius: 0.8rem;
+  &:hover {
+    transform: map-get($map: $scale, $key: "s2");
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 0px;
+}
+
+#Projects {
+  background-color: map-get($map: $primary-blues, $key: "b3");
+  min-height: 80vh;
 }

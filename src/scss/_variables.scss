@@ -89,6 +89,13 @@ $primary-fonts: (
   "ss": sans-serif,
 );
 
+$scale: (
+  "s1": scale(1.005),
+  "s2": scale(1.05),
+  's3': scale(1.2),
+  "s4": scale(1.5)
+);
+
 $smallText: 0.7em;
 /* rest of the vars */
 $backgroundColor: map-get(

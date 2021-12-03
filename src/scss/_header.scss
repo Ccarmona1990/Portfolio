@@ -38,11 +38,7 @@ header {
   color: map-get($map: $primary-blues, $key: "b5");
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out;
-}
-
-#togglebtn {
-  display: none;
+  border-color 0.15s ease-in-out;
 }
 
 #togglebtn:hover {
@@ -51,9 +47,13 @@ header {
 
 .nav-btn {
   padding: 0 5px;
-  //transition: var(--transition);
   color: black;
   width: 25px;
   background-color: #00000000;
   border: 0px #00000000;
+}
+
+.whiteBackground{
+  box-shadow: $light-shadow;
+  background-color: white;
 }

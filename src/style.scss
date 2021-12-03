@@ -10,7 +10,14 @@
 @import "./scss/masthead";
 
 header,
-main,
 footer {
   padding: 0px 5vw;
+}
+
+#About, 
+#Skills,
+#Projects,
+#Contact {
+  padding: 0px 5vw;
+  min-height: 80vh;
 }
