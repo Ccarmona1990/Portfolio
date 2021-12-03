@@ -19,7 +19,7 @@ const Skills = () => {
     const skills = [
         {id: 1, skill: faHtml5, color: 'red'}, {id: 2, skill: faCss3, color: 'blue'},
         {id: 3, skill: faJsSquare, color: 'rgb(255, 230, 0)'}, {id: 4, skill: faReact, color: 'rgb(45, 100, 250)'},
-        {id: 6, skill: faSass, color: 'orange'}, {id: 7, skill: faWordpress}, 
+        {id: 6, skill: faSass, color: 'pink'}, {id: 7, skill: faWordpress}, 
         {id: 8, skill: faNpm, color: 'red'}, {id: 9, skill: faGitSquare},
         {id: 10, skill: faBootstrap, color: 'blue'},
     ]
@@ -29,7 +29,7 @@ const Skills = () => {
     ]
     return (
         <section className="resume-section" id="Skills">
-            <h1>Skills</h1>
+            <h1>My Skills</h1>
             
             <aside className="subheading skills">
                 <h4>Programming Languages & Tools</h4>
@@ -42,6 +42,7 @@ const Skills = () => {
                         )
                     })}
                 </ul>
+
             </aside>
 
             <aside className="subheading">
@@ -71,19 +72,22 @@ const Projects = () => {
     ]
     return (
         <section id='Projects' >
-            <h1>Projects</h1>
+            <h1>My Projects</h1>
             <div className='projects'>
                 {projects.map(({id,name,url,img})=>{
                     return (
                         <div key={id} className="projectContainer">
-                    <a className="project" href={url} title={name}>
+                    
                         <img className="project-img" src={img} alt="..." />
-                        
                         <aside className="project-caption">
                             <h3 className= "project-name">{name} 
                             </h3>
                         </aside>
-                    </a>
+
+                        <a className="project" href={url} title={name}>
+                            <aside className='modal'>
+                            </aside>
+                        </a>
                 </div>
                     )
                 })}
@@ -203,8 +207,8 @@ const Form = ()=>{
 const Contact = () =>{
     return (
         <section id='Contact'>
-            <h1>Contact</h1>
-            <h3>Let's get in contact.</h3>
+            <h1>Let's get in touch</h1>
+            
             <div className='formContainer'>
                 <Form/>
             </div>

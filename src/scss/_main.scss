@@ -32,9 +32,6 @@ main {
 .project-img {
   width: 20rem;
   border-radius: 0.8rem;
-  &:hover {
-    transform: map-get($map: $scale, $key: "s2");
-  }
 }
 
 .projects {
@@ -44,7 +41,29 @@ main {
   padding: 2rem 0px;
 }
 
-#Projects {
+.projectContainer {
+  position: relative;
+  margin: 1rem 0px;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 88.5%;
+  top: 0;
+  right: 0;
+  border-radius: 0.8rem;
+  &:hover {
+    background: rgba(226, 203, 203, 0.466);
+  }
+}
+
+#Projects h1 {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#Projects,
+#About {
   background-color: map-get($map: $primary-blues, $key: "b3");
-  min-height: 80vh;
 }
