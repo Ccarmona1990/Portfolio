@@ -12,13 +12,19 @@ const NavLogo = () =>{
 }
 
 const NavLinks = ()=>{
+    const navLinks = [
+        {id: 1, title: 'About'},{id: 2, title: 'Skills'},
+        {id: 3, title: 'Projects'},{id: 4, title: 'Contact'}
+    ] 
     return (
     <section>
-        <ul className="navbar-nav ms-auto my-2 my-lg-0">
-            <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-            <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
-            <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+        <ul className="navbar-nav">
+            {navLinks.map(({title,id})=>{
+                const path = `#${title}`
+                return (
+                    <li key={id} className="nav-item"><a className="nav-link" href={path}>{title}</a></li>
+                )
+            })}
         </ul>
     </section>
     )
@@ -35,11 +41,31 @@ const Toggle = ()=>{
 }
 
 const Nav = () => {
+    let [isToggleSize, setToggleSize] = React.useState(false);
+    React.useEffect(()=>{
+        const top = document.querySelector('#page-top');
+        window.addEventListener('resize',(e)=>{
+            if(e.target.innerWidth < 680){
+                setToggleSize(true);
+            } else {
+                setToggleSize(false);
+            };
+        })
+        window.addEventListener('scroll', ()=>{
+            const scrollHeight = window.pageYOffset;
+            //console.log(scrollHeight);
+            if (scrollHeight > 100){
+                top.classList.add('whiteBackground');
+            } else if (scrollHeight < 100){
+                top?.classList?.remove('whiteBackground');
+            }
+        })
+    },[])
+    
     return (
         <nav className="navBar">
             <NavLogo/>
-            <Toggle/>
-            <NavLinks/>
+            {isToggleSize ? <Toggle/> : <NavLinks/>}
         </nav>
     )
 }
