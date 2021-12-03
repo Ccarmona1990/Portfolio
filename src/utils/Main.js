@@ -97,8 +97,8 @@ const Projects = () => {
 }
 
 const Label = ({tag, type, name, placeholder, value, onChange, cols, rows})=>{
-    const isInput = tag == 'input';
-    const isTextarea = tag == 'textarea';
+    const isInput = tag === 'input';
+    const isTextarea = tag === 'textarea';
     const className = `${type}ContactForm form-control`;
     if(isInput){
         return (
