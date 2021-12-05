@@ -11,7 +11,8 @@ const SocialMediaIcons = ()=>{
                         key={id} 
                         className='socialMediaIcon' 
                         href={url}
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                             <FontAwesomeIcon icon={logo} size={size}></FontAwesomeIcon>
                         </a>
                     )
