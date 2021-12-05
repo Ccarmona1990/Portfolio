@@ -7,9 +7,9 @@ const About = () =>{
             <section className='aboutContainer'>
                 <div className='aboutSection1'>
                     <img className='aboutImg' src={aboutImg} alt='aboutImg'></img>
-                    <h2>
-                        Hey there, I'm Christopher Carmona and I like building cool webApps, and websites.
-                    </h2>
+                    <h1>
+                        Hey there, I'm Christopher Carmona. I like building cool websites, and webApps.
+                    </h1>
                 </div>
 
                 <div>

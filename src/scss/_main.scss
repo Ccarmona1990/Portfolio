@@ -93,20 +93,30 @@ main {
   place-items: center;
   gap: 1rem;
   padding: 1rem 0px;
-  & h2{
+  & h2 {
     margin: 2rem 0px;
   }
-  & div{
+  & div {
     margin: 0px 1rem;
   }
 }
 
-.aboutSection1{
+.aboutSection1 {
   display: grid;
   grid-template-columns: 35% auto;
+  gap: 1vw;
   @include center();
+  & h1 {
+    font-size: 3rem;
+  }
 }
 
+@media (max-width: 1032px) {
+  .aboutSection1 {
+    grid-template-columns: auto;
+    gap: 1vh;
+  }
+}
 
 @media (max-width: 820px) {
   .aboutContainer {
@@ -123,7 +133,6 @@ main {
 
 .aboutText {
   margin: 0px 1rem;
-  //max-width: 550px;
 }
 
 .socialMediaIcon {
@@ -153,6 +162,7 @@ main {
   display: none;
 }
 
-#Contact h1, #Projects h1{
+#Contact h1,
+#Projects h1 {
   @include center();
 }
