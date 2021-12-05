@@ -8,8 +8,9 @@
 @import "./scss/header";
 @import "./scss/main";
 @import "./scss/masthead";
+@import "./scss/back-to-top";
 
-header,
+nav,
 footer {
   padding: 0px 5vw;
 }
@@ -18,6 +19,6 @@ footer {
 #Skills,
 #Projects,
 #Contact {
-  padding: 0px 5vw;
+  padding: 4rem 5vw;
   min-height: 80vh;
 }
