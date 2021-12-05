@@ -24,6 +24,7 @@
   @include center();
   margin: 5rem 0px;
   padding: 0px 5vw;
+  font-size: 8rem;
   font-family: map-get($map: $primary-fonts, $key: 'f4');
   word-wrap: break-word;
 }

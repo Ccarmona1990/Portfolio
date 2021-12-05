@@ -6,7 +6,7 @@ const Projects = () => {
     
     return (
         <section id='Projects' >
-            <h1>My Projects</h1>
+            <h1>Projects I've built</h1>
             <div className='projects'>
                 {projects.map(({id,name,url,img,description,tools})=>{
                     return (
