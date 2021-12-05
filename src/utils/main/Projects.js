@@ -22,7 +22,8 @@ const Projects = () => {
                             <a 
                             className="project" 
                             href={url} title={name}
-                            target="_blank">
+                            target="_blank"
+                            rel="noreferrer">
                                 <aside className='modal'>
                                 </aside>
                             </a>
