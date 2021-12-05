@@ -89,11 +89,24 @@ main {
 
 .aboutContainer {
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: auto;
   place-items: center;
   gap: 1rem;
   padding: 1rem 0px;
+  & h2{
+    margin: 2rem 0px;
+  }
+  & div{
+    margin: 0px 1rem;
+  }
 }
+
+.aboutSection1{
+  display: grid;
+  grid-template-columns: 35% auto;
+  @include center();
+}
+
 
 @media (max-width: 820px) {
   .aboutContainer {
@@ -110,7 +123,7 @@ main {
 
 .aboutText {
   margin: 0px 1rem;
-  max-width: 550px;
+  //max-width: 550px;
 }
 
 .socialMediaIcon {
