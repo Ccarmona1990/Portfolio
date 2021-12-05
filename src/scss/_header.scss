@@ -1,7 +1,15 @@
-header {
+nav {
   height: 4.3rem;
   box-shadow: $light-shadow;
   background-color: white;
+  overflow: hidden;
+}
+
+@media (min-width: 840px) {
+  nav {
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
 
 .fixed-top {
@@ -21,6 +29,10 @@ header {
   align-items: center;
 }
 
+.hideNavbar-nav {
+  display: none;
+}
+
 .navbar-nav {
   display: flex;
   flex-direction: row;
@@ -38,7 +50,18 @@ header {
   color: map-get($map: $primary-blues, $key: "b5");
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out;
+    border-color 0.15s ease-in-out;
+}
+
+@media (min-width: 680px) {
+  .hideNavbar-nav {
+    display: flex;
+  }
+}
+
+#togglebtn {
+  position: relative;
+  display: none;
 }
 
 #togglebtn:hover {
@@ -46,14 +69,40 @@ header {
 }
 
 .nav-btn {
-  padding: 0 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
   color: black;
-  width: 25px;
+  width: 28px;
+  height: 32px;
   background-color: #00000000;
   border: 0px #00000000;
+  cursor: pointer;
 }
 
-.whiteBackground{
+@media (max-width: 670px) {
+  #togglebtn {
+    display: block;
+  }
+}
+
+.whiteBackground {
   box-shadow: $light-shadow;
   background-color: white;
+}
+
+.toggleItem {
+  list-style: none;
+  transition: $transition1;
+
+  &:hover {
+    background-color: map-get($map: $primary-blues, $key: "b3");
+  }
+  a:hover {
+    color: white;
+  }
+}
+
+.hideBar {
+  height: 13rem;
 }

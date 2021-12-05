@@ -1,0 +1,12 @@
+
+.b-Top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: map-get($map: $primary-blues, $key:'b5');
+  transition: all 0.3s linear;
+}
+
+.b-Top:hover {
+  transform: scale(1.2);
+}

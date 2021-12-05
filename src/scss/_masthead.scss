@@ -1,7 +1,7 @@
 .masthead {
-  height: 80vh;
   min-height: 40rem;
   padding-top: 10rem;
+  place-items: center;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(
       to bottom,
@@ -13,6 +13,19 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  h2{
+    color: white;
+  }
+}
+
+.mastheadText{
+  color: white;
+  text-transform: capitalize;
+  @include center();
+  margin: 5rem 0px;
+  padding: 0px 5vw;
+  font-family: map-get($map: $primary-fonts, $key: 'f4');
+  word-wrap: break-word;
 }
 
 @media (min-width: 992px) {

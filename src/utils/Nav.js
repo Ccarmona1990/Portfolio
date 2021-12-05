@@ -1,71 +1,40 @@
 import React from 'react'
-import ccLogo from '../Images/Logo/fccLogo.png'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faAlignJustify} from '@fortawesome/free-solid-svg-icons'
-
-const NavLogo = () =>{
-    return (
-        <section>
-            <img src={ccLogo} alt="logo"></img>
-        </section>
-    )
-}
-
-const NavLinks = ()=>{
-    const navLinks = [
-        {id: 1, title: 'About'},{id: 2, title: 'Skills'},
-        {id: 3, title: 'Projects'},{id: 4, title: 'Contact'}
-    ] 
-    return (
-    <section>
-        <ul className="navbar-nav">
-            {navLinks.map(({title,id})=>{
-                const path = `#${title}`
-                return (
-                    <li key={id} className="nav-item"><a className="nav-link" href={path}>{title}</a></li>
-                )
-            })}
-        </ul>
-    </section>
-    )
-}
-
-const Toggle = ()=>{
-    return (
-        <div id="togglebtn">
-            <button id="navBtn" type="button" className="nav-btn">
-                <FontAwesomeIcon icon={faAlignJustify} size='2x'></FontAwesomeIcon>
-            </button>
-        </div>
-    )
-}
+import NavLinks from './nav/NavLinks'
+import NavLogo from './nav/NavLogo'
+import Toggle from './nav/Toggle'
 
 const Nav = () => {
-    let [isToggleSize, setToggleSize] = React.useState(false);
     React.useEffect(()=>{
         const top = document.querySelector('#page-top');
-        window.addEventListener('resize',(e)=>{
-            if(e.target.innerWidth < 680){
-                setToggleSize(true);
-            } else {
-                setToggleSize(false);
-            };
-        })
+        const backToTop = document.querySelector('.b-Top')
         window.addEventListener('scroll', ()=>{
             const scrollHeight = window.pageYOffset;
             //console.log(scrollHeight);
             if (scrollHeight > 100){
                 top.classList.add('whiteBackground');
+                backToTop?.classList?.remove('hide');
             } else if (scrollHeight < 100){
                 top?.classList?.remove('whiteBackground');
+                backToTop.classList.add('hide');
+                
             }
         })
     },[])
     
     return (
-        <nav className="navBar">
-            <NavLogo/>
-            {isToggleSize ? <Toggle/> : <NavLinks/>}
+        <nav>
+            <section className="navBar">
+                <NavLogo/>
+                <Toggle/>
+                <NavLinks 
+                sectionClass='hideNavbar-nav'
+                containerClass="navbar-nav" itemClass="nav-item"/>
+                
+            </section>
+            <section className=''>
+                {<NavLinks 
+                containerClass="toggleBar" itemClass="toggleItem" />}
+            </section>
         </nav>
     )
 }

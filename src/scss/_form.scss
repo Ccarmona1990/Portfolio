@@ -36,14 +36,16 @@
   }
 }
 
-.formContainer{
+.formContainer {
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0px;
 }
 
-.form-control{
-  border-color: map-get($map: $primary-blues, $key:'b4' );
-  padding: 1rem ;
+.form-control {
+  border-color: map-get($map: $primary-blues, $key: "b4");
+  padding: 1rem;
   margin: 2rem 0px;
   width: 25rem;
   display: block;
@@ -51,10 +53,33 @@
   border-radius: 0.3rem;
 }
 
-.contactForm{
+.contactForm {
   padding: 1rem 2rem;
   border-radius: 0.8rem;
-  background: map-get($map: $primary-blues, $key:'b2' );
+  background: map-get($map: $primary-blues, $key: "b2");
   box-shadow: $light-shadow;
+}
+
+.contactFormBtn {
+  width: 100%;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid map-get($map: $primary-blues, $key: "b8");
+  background: map-get($map: $primary-blues, $key: "b4");
+  letter-spacing: $letterSpacing;
+  text-transform: capitalize;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-weight: 800;
+  &:hover {
+    background: map-get($map: $primary-blues, $key: "b6");
+    color: map-get($map: $primary-blues, $key: "b2");
+  }
+  &:active {
+    background: map-get($map: $primary-blues, $key: "b8");
+    color: map-get($map: $primary-blues, $key: "b2");
+  }
 }
 

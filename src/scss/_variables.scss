@@ -7,6 +7,8 @@ Fonts
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+
 /* colors */
 
 /* dark shades of primary color*/
@@ -86,7 +88,9 @@ $primary-fonts: (
   "f1": "Roboto",
   "f2": "Open Sans",
   "f3": "Nunito",
-  "ss": sans-serif,
+  "f4": "Grand Hotel",
+  "f5": "Playfair Display",
+  "fs": sans-serif,
 );
 
 $scale: (
