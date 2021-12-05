@@ -89,7 +89,7 @@ main {
 
 .aboutContainer {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 30% auto;
   place-items: center;
   gap: 1rem;
   padding: 1rem 0px;
@@ -138,4 +138,8 @@ main {
 
 .hide {
   display: none;
+}
+
+#Contact h1, #Projects h1{
+  @include center();
 }
