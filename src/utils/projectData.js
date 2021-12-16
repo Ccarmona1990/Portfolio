@@ -1,7 +1,7 @@
 import {faInstagram, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons'
 import {faDatabase} from '@fortawesome/free-solid-svg-icons'
-import {faHtml5,faCss3,faJsSquare,faReact, faSass,faWordpress, faNpm,faGitSquare, faBootstrap, faNodeJs} from '@fortawesome/free-brands-svg-icons'
+import {faHtml5,faCss3,faJsSquare,faReact, faSass,faWordpress, faNpm,faGitSquare, faNodeJs} from '@fortawesome/free-brands-svg-icons'
 import cocktailAPI from '../Images/Screenshot (498).png'
 import infinitetriforce from '../Images/Screenshot (499).png'
 import tennisGame from '../Images/Screenshot (508).png'
