@@ -9,7 +9,6 @@ const Nav = () => {
         const backToTop = document.querySelector('.b-Top')
         window.addEventListener('scroll', ()=>{
             const scrollHeight = window.pageYOffset;
-            //console.log(scrollHeight);
             if (scrollHeight > 100){
                 top.classList.add('whiteBackground');
                 backToTop?.classList?.remove('hide');
