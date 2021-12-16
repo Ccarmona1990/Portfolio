@@ -1,3 +1,3 @@
-# Portafolio
+# Portfolio
 
-Portafolio site with upmost relevant information about me.
+Portfolio site with upmost relevant information about me.
