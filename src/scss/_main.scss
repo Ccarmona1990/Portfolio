@@ -78,6 +78,12 @@ main {
   word-break: break-all;
 }
 
+@media (max-width: 800px) {
+  .projects {
+    justify-content: center;
+  }
+}
+
 #Projects,
 #About {
   background-color: map-get($map: $primary-blues, $key: "b3");
@@ -149,7 +155,7 @@ main {
   }
 }
 
-@media (max-width: 587.5px) {
+@media (max-width: 521px) {
   .formContainer {
     justify-content: center;
   }
