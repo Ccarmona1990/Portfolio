@@ -15,10 +15,17 @@ footer {
   padding: 0px 5vw;
 }
 
-#About, 
+#About,
 #Skills,
-#Projects,
-#Contact {
-  padding: 4rem 5vw;
+#Projects {
+  padding: 4rem 1vw;
   min-height: 80vh;
+}
+
+@media (min-width: 600px) {
+  #About,
+  #Skills,
+  #Projects {
+    padding: 4rem 5vw;
+  }
 }

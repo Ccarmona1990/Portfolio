@@ -7,7 +7,6 @@
 #textForm {
   border: 1px solid map-get($map: $primary-greys, $key: "g4");
   height: 2rem;
-  width: 20rem;
 }
 
 #checkbox {
@@ -47,13 +46,16 @@
   border-color: map-get($map: $primary-blues, $key: "b4");
   padding: 1rem;
   margin: 2rem 0px;
-  width: 25rem;
+  width: 100%;
   display: block;
   outline: none;
   border-radius: 0.3rem;
 }
 
 .contactForm {
+  width: 50vw;
+  min-width: 20rem;
+  max-width: 31rem;
   padding: 1rem 2rem;
   border-radius: 0.8rem;
   background: map-get($map: $primary-blues, $key: "b2");
@@ -82,4 +84,3 @@
     color: map-get($map: $primary-blues, $key: "b2");
   }
 }
-
