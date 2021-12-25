@@ -23,26 +23,26 @@ export const projects = [
         },
         {
             id: 2, 
-            name: 'To-do', 
+            name: 'Task Manager', 
             url: "https://todo-miniproject.netlify.app/", 
             img: todo,
-            description: 'WebApp for listing tasks',
-            tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ React'
+            description: 'An amazing WebApp to keep track of your tasks',
+            tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ React ~ MongoDB ~ Nodejs ~ express'
         },
         {
             id: 3, 
             name: 'Infinite Triforce', 
             url: "https://infinitetriforce.netlify.app/", 
             img: infinitetriforce,
-            description: 'Tribute website to the famous and popular Zelda game franchise.',
-            tools: 'HTML ~ CSS ~ JavaScript'
+            description: 'Tribute website to the famous and popular Zelda game franchise. It consumes its data from a self-made API',
+            tools: 'HTML ~ CSS ~ JavaScript ~ nodejs'
         },
         {
             id: 4,
-            name: 'Tennis Game',
+            name: 'Ping Pong Game',
             url: 'https://2dtennisgame.netlify.app/',
             img: tennisGame,
-            description: 'WebApp 2D tennis game built using HTML5 canvas',
+            description: '2D ping pong game built using HTML5 canvas',
             tools: 'HTML ~ CSS ~ SASS ~ JavaScript'
         }
     ]
