@@ -28,6 +28,7 @@
   font-family: map-get($map: $primary-fonts, $key: 'f4');
   word-wrap: break-word;
 }
+//524px
 
 @media (min-width: 992px) {
   .masthead {
@@ -39,5 +40,11 @@
   header {
     box-shadow: none;
     background-color: transparent;
+  }
+}
+
+@media (max-width: 524px){
+  .mastheadText{
+    font-size: 4rem;
   }
 }
