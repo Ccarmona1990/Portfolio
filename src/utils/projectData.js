@@ -61,7 +61,7 @@ export const myProjects = [
     {
         id: 2, 
         name: 'My Front-End Learning Records', 
-        url:"C://Users/elcri/OneDrive/Desktop/Programming/js/js projects/MyJSprojects.html", 
+        url:"#", 
         img: jspic,
         description: 'A personal website to display a collection of small projects created while learning front-end technologies such as HTML, CSS, JavaScript, Sass, Bootstrap and others.',
         tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ MongoDB ~ Nodejs ~ Express ~ Bootstrap'
