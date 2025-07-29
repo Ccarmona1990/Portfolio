@@ -6,19 +6,27 @@ import Toggle from './nav/Toggle'
 const Nav = () => {
     React.useEffect(()=>{
         const top = document.querySelector('#page-top');
-        const backToTop = document.querySelector('.b-Top')
+        const backToTop = document.querySelector('.b-Top');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        console.log(navLinks);
+        
+
         window.addEventListener('scroll', ()=>{
             const scrollHeight = window.pageYOffset;
             if (scrollHeight > 100){
                 top.classList.add('whiteBackground');
                 backToTop?.classList?.remove('hide');
+                navLinks.forEach((e)=>e.classList.add('blueLetters')) ;
+                
             } else if (scrollHeight < 100){
                 top?.classList?.remove('whiteBackground');
                 backToTop.classList.add('hide');
-                
+                navLinks.forEach((e)=>e.classList.remove('blueLetters')) ;
             }
         })
-    },[])
+    },[]);
+
     
     return (
         <nav>

@@ -1,25 +1,5 @@
 import React from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {socialMediaData} from '../projectData'
 
-const SocialMediaIcons = ()=>{
-    return (
-        <section className='socialMediaIcons'>
-                {socialMediaData.map(({id, logo, url, size})=>{
-                    return (
-                        <a 
-                        key={id} 
-                        className='socialMediaIcon' 
-                        href={url}
-                        target="_blank"
-                        rel="noreferrer">
-                            <FontAwesomeIcon icon={logo} size={size}></FontAwesomeIcon>
-                        </a>
-                    )
-                })}
-            </section>
-    )
-}
 
 const Label = ({tag, type, name, placeholder, value, onChange, cols, rows})=>{
     const isInput = tag === 'input';
@@ -139,7 +119,6 @@ const Contact = () =>{
             <h1>Let's get in touch</h1>
             
             <div className='formContainer'>
-                <SocialMediaIcons/>
                 <Form/>
             </div>
         </section>

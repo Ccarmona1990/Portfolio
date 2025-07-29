@@ -9,6 +9,7 @@ main {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
+  @include center();
 }
 
 .list-inline-item {
@@ -26,6 +27,10 @@ main {
 
 .fa-ul {
   padding: 2rem 0px;
+}
+
+.subheading{
+  text-align: left;
 }
 
 .project-img {
@@ -89,6 +94,10 @@ main {
   background-color: map-get($map: $primary-blues, $key: "b3");
 }
 
+.sh1{
+  @include center();
+}
+
 #Skills article {
   padding: 1rem 0px;
 }
@@ -109,12 +118,8 @@ main {
 
 .aboutSection1 {
   display: grid;
-  grid-template-columns: 35% auto;
   gap: 1vw;
   @include center();
-  & h1 {
-    font-size: 3rem;
-  }
 }
 
 @media (max-width: 1032px) {
@@ -131,14 +136,18 @@ main {
   }
 }
 
-.aboutImg {
-  max-width: 320px;
-  height: 320px;
-  border-radius: 50%;
-}
-
 .aboutText {
   margin: 0px 1rem;
+}
+
+.socialMediaIcons{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 4.3rem;
+  right: 1.5rem;
+  z-index: 11;
 }
 
 .socialMediaIcon {
@@ -169,6 +178,8 @@ main {
 }
 
 #Contact h1,
-#Projects h1 {
+#Projects h1, 
+#Skills h1,
+#about h1 {
   @include center();
 }
