@@ -5,13 +5,6 @@ nav {
   overflow: hidden;
 }
 
-@media (min-width: 840px) {
-  nav {
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
-
 .fixed-top {
   position: fixed;
   top: 0;
@@ -46,22 +39,30 @@ nav {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.2rem;
   color: map-get($map: $primary-blues, $key: "b5");
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 670px) { 
   .hideNavbar-nav {
     display: flex;
   }
+        .toggleItem {
+          display: none;
+        }
+                
 }
 
 #togglebtn {
   position: relative;
   display: none;
+}
+
+.toggleBar{
+  text-align: right;
 }
 
 #togglebtn:hover {
@@ -84,12 +85,33 @@ nav {
   #togglebtn {
     display: block;
   }
+    .hideBar {
+      height: 13rem;
+    }
+
+}
+
+@media (min-width: 840px) {
+  nav {
+    box-shadow: none;
+    background-color: transparent;
+  }
+    .nav-link {
+      color: white;
+    }
+    
 }
 
 .whiteBackground {
   box-shadow: $light-shadow;
   background-color: white;
+  color: map-get($map: $primary-blues, $key: "b5");
 }
+
+.blueLetters{
+  color: map-get($map: $primary-blues, $key: "b5");
+}
+
 
 .toggleItem {
   list-style: none;
@@ -103,6 +125,4 @@ nav {
   }
 }
 
-.hideBar {
-  height: 13rem;
-}
+

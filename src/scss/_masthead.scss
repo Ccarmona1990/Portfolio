@@ -1,6 +1,6 @@
 .masthead {
-  min-height: 40rem;
-  padding-top: 10rem;
+  min-height: 41rem;
+  padding-top: 7rem;
   place-items: center;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(
@@ -8,7 +8,10 @@
       rgba(142, 145, 158, 0.39) 0%,
       rgba(36, 63, 138, 0.7) 100%
     ),
-    url("https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    url("C://Users/elcri/OneDrive/Desktop/Programming/React/portafolio/src/Images/onLaptop2.jpg")
+    /*
+    url("https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");*/;
+
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -18,22 +21,42 @@
   }
 }
 
+.profilePic {
+  max-width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: block;
+  position: static;
+  
+}
+
 .mastheadText{
   color: white;
+  line-height: 110px;
   text-transform: capitalize;
   @include center();
-  margin: 5rem 0px;
   padding: 0px 5vw;
   font-size: 8rem;
   font-family: map-get($map: $primary-fonts, $key: 'f4');
   word-wrap: break-word;
+  position: relative;
+  top: 45px;
+  z-index: 10;
 }
+
+.mastheadBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 //524px
 
 @media (min-width: 992px) {
   .masthead {
-    height: 80vh;
-    min-height: 40rem;
+    height: 100vh;
+    min-height: 41rem;
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
@@ -41,10 +64,22 @@
     box-shadow: none;
     background-color: transparent;
   }
+  .mastheadBlock {
+  display: block;
+  flex-direction: none;
+  }
+    .profilePic {
+      position: absolute;
+      bottom: 60px;
+      z-index: 9;
+    }
+    
 }
 
-@media (max-width: 524px){
+@media (max-width: 670px){
+  
   .mastheadText{
     font-size: 4rem;
+    line-height: 55px;
   }
 }

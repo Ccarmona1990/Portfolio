@@ -1,5 +1,5 @@
 import React from 'react'
-import BackToTop from './main/BackToTop'
+import SideOptBar from './main/SideOptBar'
 import About from './main/About'
 import Skills from './main/Skills'
 import Projects from './main/Projects'
@@ -11,8 +11,8 @@ const Main = () => {
             <About/>
             <Skills/>
             <Projects/>
-            <Contact/>
-            <BackToTop/>
+            {/*<Contact/>*/}
+            <SideOptBar/>
         </div>
     )
 }

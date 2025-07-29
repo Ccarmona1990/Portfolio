@@ -1,4 +1,3 @@
-import aboutImg from '../../Images/smiling.jpg'
 import { description, descriptionIntro } from '../projectData'
 
 const About = () =>{
@@ -6,11 +5,10 @@ const About = () =>{
         <section id='About'>
             <section className='aboutContainer'>
                 <div className='aboutSection1'>
-                    <img className='aboutImg' src={aboutImg} alt='aboutImg'></img>
                     {descriptionIntro}
                 </div>
 
-                <div>
+                <div className='aboutSection2'>
                     <h2 className='aboutText'>
                         {description}
                     </h2>

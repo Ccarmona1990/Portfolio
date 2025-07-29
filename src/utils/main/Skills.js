@@ -9,7 +9,7 @@ const Skills = () => {
             <h1>My Skills</h1>
             
             <article>
-                <aside className="subheading skills">
+                <aside className="sh1 subheading skills">
                     <h4>Programming Languages & Tools</h4>
                     <ul className="list-inline dev-icons">
                         {skills.map(({id, skill, color})=>{
@@ -23,7 +23,7 @@ const Skills = () => {
 
                 </aside>
 
-                <aside className="subheading">
+                <aside className="sh2 subheading">
                     <h4>Workflow</h4>
                     <ul className="fa-ul">
                         {Workflow.map(({id, ability})=>{
