@@ -15,6 +15,7 @@ export const navLinks = [
         {id: 4, title: 'Contact'}
     ] 
 
+    // This was the prevous set of projects used to showcase my experience. It was replace in the v2 by the var myProjects
 export const projects = [
     {
         id: 1, 
@@ -49,6 +50,7 @@ export const projects = [
         tools: 'HTML ~ CSS ~ SASS ~ JavaScript'
     }
     ]
+    // New set of projects being used on v2
 export const myProjects = [
     {
         id: 1, 
