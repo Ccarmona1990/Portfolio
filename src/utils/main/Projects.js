@@ -1,6 +1,4 @@
 import React from 'react'
-
-import {projects} from '../projectData'
 import {myProjects} from '../projectData'
 
 const Projects = () => {
