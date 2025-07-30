@@ -22,7 +22,7 @@ export const projects = [
         name: 'Task Manager', 
         url: "https://tm24h.netlify.app/", 
         img: todo,
-        description: 'An amazing WebApp to keep track of your tasks. Both the front-end and the back-end of the webApp were self-developed.',
+        description: 'An WebApp to keep track of daily tasks. It includes a login page making it which is connected to a database to store usernames and passwords and daily tasks stablished on the webapp once logged in.',
         tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ React ~ MongoDB ~ Nodejs ~ Express ~ Bootstrap'
     },
     {
@@ -62,19 +62,11 @@ export const myProjects = [
     },
     {
         id: 2, 
-        name: 'My Front-End Learning Records', 
+        name: 'My Learning Projects', 
         url:"#", 
         img: jspic,
         description: 'A personal website to display a collection of small projects created while learning front-end technologies such as HTML, CSS, JavaScript, Sass, Bootstrap and others.',
         tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ MongoDB ~ Nodejs ~ Express ~ Bootstrap'
-    },
-    {
-        id: 3, 
-        name: 'Task Manager', 
-        url: "https://tm24h.netlify.app/", 
-        img: todo,
-        description: 'An amazing WebApp to keep track of your tasks. Both the front-end and the back-end of the webApp were self-developed.',
-        tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ React ~ MongoDB ~ Nodejs ~ Express ~ Bootstrap'
     }
 ]
 
