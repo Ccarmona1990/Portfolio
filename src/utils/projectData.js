@@ -63,7 +63,7 @@ export const myProjects = [
     {
         id: 2, 
         name: 'My Learning Projects', 
-        url:"#", 
+        url:"https://mylearningprojects.netlify.app/", 
         img: jspic,
         description: 'A personal website to display a collection of small projects created while learning front-end technologies such as HTML, CSS, JavaScript, Sass, Bootstrap and others.',
         tools: 'HTML ~ CSS ~ Sass ~ JavaScript ~ MongoDB ~ Nodejs ~ Express ~ Bootstrap'
