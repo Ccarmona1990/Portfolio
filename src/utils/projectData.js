@@ -11,8 +11,8 @@ import jspic from '../Images/0_5Q_7VXyQ8xo4Dgpp.webp'
 export const navLinks = [
         {id: 1, title: 'About'},
         {id: 2, title: 'Skills'},
-        {id: 3, title: 'Projects'},
-        {id: 4, title: 'Contact'}
+        {id: 3, title: 'Projects'}
+        //,{id: 4, title: 'Contact'}
     ] 
 
     // This was the prevous set of projects used to showcase my experience. It was replace in the v2 by the var myProjects
