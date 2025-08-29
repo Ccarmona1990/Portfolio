@@ -1,7 +1,6 @@
 .masthead {
   min-height: 41rem;
   padding-top: 7rem;
-  place-items: center;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(
       to bottom,
@@ -16,32 +15,19 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
-  h2{
+  h2, h3{
     color: white;
   }
 }
 
+
 .profilePic {
   max-width: 320px;
   height: 320px;
+  border: 2px solid turquoise;
   border-radius: 50%;
-  display: block;
-  position: static;
-  
-}
-
-.mastheadText{
-  color: white;
-  line-height: 110px;
-  text-transform: capitalize;
-  @include center();
-  padding: 0px 5vw;
-  font-size: 8rem;
-  font-family: map-get($map: $primary-fonts, $key: 'f4');
-  word-wrap: break-word;
-  position: relative;
-  top: 45px;
-  z-index: 10;
+  display: block;  
+  margin: 20px;
 }
 
 .mastheadBlock {
@@ -49,6 +35,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+}
+
+.mastheadText{
+  //@include center();
+  color: white;
+  padding: 0px 0px 0px 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & h3:first-child{
+    animation: slideDown 1s ease forwards;
+  }
+  & h3:last-of-type{
+  animation: slideUp 1s ease forwards;
+  }
+  p {
+    width: 70%;
+    margin: 10px 0px 10px 0px;
+    animation: slideLeft 1s ease forwards;
+  }
+}
+
+.mastheadName{
+  color: white;
+  text-transform: capitalize;
+  padding: 0px;
+  font-size: 4rem;
+  font-family: map-get($map: $primary-fonts, $key: 'f4');
+  word-wrap: break-word;
+  animation: slideRight 1s ease forwards;
+}
+
+.App {
+  display: inline;
+  color: turquoise;
+  font-size: 1.5rem;
 }
 
 //524px
@@ -65,21 +88,20 @@
     background-color: transparent;
   }
   .mastheadBlock {
-  display: block;
-  flex-direction: none;
+  flex-direction: row-reverse;
+  margin: 10vh 10vw 10vh 15vw;
   }
-    .profilePic {
-      position: absolute;
-      bottom: 60px;
-      z-index: 9;
-    }
+  .mastheadText{
+    padding: 0px 20px 0px 20px;
+  }
     
 }
 
 @media (max-width: 670px){
   
-  .mastheadText{
+  .mastheadName{
     font-size: 4rem;
     line-height: 55px;
   }
 }
+

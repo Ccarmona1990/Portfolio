@@ -22,6 +22,10 @@ nav {
   align-items: center;
 }
 
+.navLogo{
+  animation: slideRight 1s ease forwards;
+}
+
 .hideNavbar-nav {
   display: none;
 }
@@ -44,6 +48,8 @@ nav {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
+    animation: slideUp 1s ease forwards;
+
 }
 
 @media (min-width: 670px) { 
@@ -88,7 +94,6 @@ nav {
     .hideBar {
       height: 13rem;
     }
-
 }
 
 @media (min-width: 840px) {
@@ -125,4 +130,50 @@ nav {
   }
 }
 
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
 
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft{
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: transLateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+}

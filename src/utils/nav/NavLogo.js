@@ -3,7 +3,7 @@ import ccLogo from '../../Images/Logo/fccLogo.png'
 const NavLogo = () =>{
     return (
         <section>
-            <img src={ccLogo} alt="logo"></img>
+            <img className="navLogo" src={ccLogo} alt="logo"></img>
         </section>
     )
 }
