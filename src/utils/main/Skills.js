@@ -1,9 +1,28 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {skills, Workflow} from '../projectData'
 import {faCheck} from '@fortawesome/free-solid-svg-icons'
+import React from 'react'
 
 const Skills = () => {
-    
+    React.useEffect(()=>{
+        const sh1 = document.querySelector('.sh1');
+        const sh2 = document.querySelector('.sh2');
+        const skillsH1 = document.querySelector('#Skills h1');
+
+        const scrollActive = ()=>{
+            const scrollHeight = window.pageYOffset;
+            console.log(scrollHeight);
+            if (scrollHeight > 820){
+            sh1?.classList?.add('visible');
+            sh2?.classList?.add('visible');
+            skillsH1?.classList?.add('visible');
+            }
+        }
+        window.addEventListener('scroll', scrollActive);
+        return ()=>{
+            window.removeEventListener('scroll', scrollActive);}
+    },[]);
+
     return (
         <section className="skills-section" id="Skills">
             <h1>My Skills</h1>
@@ -14,7 +33,8 @@ const Skills = () => {
                     <ul className="list-inline dev-icons">
                         {skills.map(({id, skill, color})=>{
                             return (
-                                <li key={id} className="list-inline-item">
+                                <li key={id} className="list-inline-item"
+                                style={{'--i':id}}>
                                     <FontAwesomeIcon icon={skill} size='3x' color={color}></FontAwesomeIcon>
                                 </li>
                             )
