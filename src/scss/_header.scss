@@ -22,6 +22,10 @@ nav {
   align-items: center;
 }
 
+.navLogo{
+  animation: slideRight 1s ease forwards;
+}
+
 .hideNavbar-nav {
   display: none;
 }
@@ -42,8 +46,11 @@ nav {
   padding: 0.5rem 0.2rem;
   color: map-get($map: $primary-blues, $key: "b5");
   text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out;
+  transition: color 0.15s ease, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
+  opacity: 0;
+  animation: slideUp .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
 }
 
 @media (min-width: 670px) { 
@@ -88,7 +95,6 @@ nav {
     .hideBar {
       height: 13rem;
     }
-
 }
 
 @media (min-width: 840px) {
@@ -124,5 +130,4 @@ nav {
     color: white;
   }
 }
-
 

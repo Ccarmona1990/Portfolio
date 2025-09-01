@@ -15,7 +15,7 @@ export const navLinks = [
         //,{id: 4, title: 'Contact'}
     ] 
 
-    // This was the prevous set of projects used to showcase my experience. It was replace in the v2 by the var myProjects
+    // v1. This was the prevous set of projects used to showcase my experience. It was replace in the v2 by the var myProjects
 export const projects = [
     {
         id: 1, 
@@ -125,13 +125,12 @@ export const descriptionIntro = (
 
 export const description = (
     <p>
-        Hi! I'm a front-end developer with a passion for building nice-looking, functional interfaces using HTML, CSS, JavaScript, and WordPress. I enjoy creating websites that not only look great but also perform smoothly across all devices.
-
-        Whether I’m customizing themes, optimizing for SEO, or bringing mockups to life, I focus on writing clean code and delivering solid user-friendly experiences. I’m always learning, improving, and exploring new tools and technologies to stay sharp and innovative.
-
-    <br></br>
-    <br></br>
-        Some technologies I've used are ReactJS, redux, storybook, NodeJS, Express, databases such as MongoDB, data strutures, algorithms and many others.
-        When I'm not coding, I am an English teacher. I like watching movies and series, playing chess, solving puzzles, and playing video games in my free time.
+        You are probably wondering, how did I get here? Well, Back during the pandemic I realized that I needed a career change. I have always been passionate about technology and computers, so I decided to take the plunge and learn web development.
+        <br></br>
+        <br></br>
+        It was an uphill battle and there were a lot of sleepless nights at the beginning, but I was determined to succeed. I started with the basics of HTML, CSS, and JavaScript, and then moved on to more advanced topics like ReactJS and NodeJS. I learned these things on my own using online resources and watching lots of videos and courses. 
+        <br></br>
+        <br></br>
+        When I'm not coding, I am an English teacher. I like watching movies and series, playing chess, solving puzzles, playing video games and spending time with my family.
     </p>
     )
