@@ -7,10 +7,8 @@ const Nav = () => {
     React.useEffect(()=>{
         const top = document.querySelector('#page-top');
         const sideOptBar = document.querySelector('.sideOptBar');
-        const backToTop = document.querySelector('.b-Top');
         const navLinks = document.querySelectorAll('.nav-link');
-        const socialMediaIcons = document.querySelector('.socialMediaIcons');
-
+        
         const scrollActive = ()=>{
             const scrollHeight = window.pageYOffset;
 
