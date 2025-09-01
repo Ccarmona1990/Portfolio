@@ -2,14 +2,30 @@ import React from 'react'
 import {myProjects} from '../projectData'
 
 const Projects = () => {
-    
+    React.useEffect(()=>{
+        const projects = document.querySelector('.projects');
+        const projectsTitle = document.querySelector('#Projects h1');
+        const scrollActive = ()=>{
+            const scrollHeight = window.pageYOffset;
+            //console.log(scrollHeight);
+            if (scrollHeight > 1450){
+            projectsTitle?.classList?.add('visible');
+            projects?.classList?.add('visible');
+            }
+        }
+        window.addEventListener('scroll', scrollActive);
+
+        return ()=>{
+            window.removeEventListener('scroll', scrollActive);}
+        },[]);
     return (
         <section id='Projects' >
             <h1>My Projects</h1>
             <div className='projects'>
                 {myProjects.map(({id,name,url,img,description,tools})=>{
                     return (
-                        <div key={id} className="projectContainer">
+                        <div key={id} className="projectContainer"
+                        style={{'--i':id}}>
                             
                         <section className="projectNameContainer">
                             <h2 className= "project-name">{name} 

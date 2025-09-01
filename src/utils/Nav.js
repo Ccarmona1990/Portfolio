@@ -17,14 +17,14 @@ const Nav = () => {
                 top.classList.add('whiteBackground');
                 navLinks.forEach((e)=>e.classList.add('blueLetters'));
             }  
-            if (scrollHeight > 450) {
+            if (scrollHeight > 350) {
                 backToTop?.classList?.remove('hide');
                 socialMediaIcons?.classList?.remove('hide');
             } else if (scrollHeight < 50){
                 top?.classList?.remove('whiteBackground');
                 navLinks.forEach((e)=>e.classList.remove('blueLetters'));
             }
-            else if (scrollHeight < 450){
+            else if (scrollHeight < 350){
                 backToTop.classList.add('hide');
                 socialMediaIcons?.classList?.add('hide');
             }

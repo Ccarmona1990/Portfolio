@@ -3,6 +3,17 @@ main {
   height: 100%;
 }
 
+/*Skills start*/
+
+#Skills h1{
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+  &.visible {
+      opacity: 1;
+      animation: slideDown 2s ease forwards;
+    }
+}
+
 .subheading {
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -17,6 +28,9 @@ main {
   list-style-type: none;
   display: block;
   margin: 5px 5px;
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .list-inline {
@@ -34,6 +48,33 @@ main {
   text-align: left;
 }
 
+.sh1 {
+  @include center();
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+  &.visible {
+      opacity: 1;
+      animation: slideLeft 2s ease forwards;
+    }
+}
+
+.sh2 {
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+  &.visible {
+      opacity: 1;
+      animation: slideRight 2s ease forwards;
+    }
+}
+
+
+#Skills article {
+  padding: 1rem 0px;
+}
+
+/*Skills end*/
+/*Projects start*/
+
 .project-img {
   width: 20rem;
   height: 198px;
@@ -45,12 +86,21 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem 0px;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+  &.visible {
+      opacity: 1;
+      animation: slideUp 2s ease forwards;
+    }
 }
 
 .projectContainer {
   width: 22rem;
   margin: 2rem 0rem;
   @include center();
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .projectImgContainer {
@@ -82,6 +132,12 @@ main {
 #Projects h1 {
   word-wrap: break-word;
   word-break: break-all;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+  &.visible {
+      opacity: 1;
+      animation: slideDown 2s ease forwards;
+    }
 }
 
 @media (max-width: 800px) {
@@ -95,13 +151,9 @@ main {
   background-color: map-get($map: $primary-blues, $key: "b3");
 }
 
-.sh1{
-  @include center();
-}
+/*Projects end*/
 
-#Skills article {
-  padding: 1rem 0px;
-}
+/*About start*/
 
 .aboutContainer {
   display: grid;
@@ -124,12 +176,25 @@ main {
   border-radius: 50%;
   display: block;  
   margin: 20px;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+}
+.profilePicAbout.visible {
+  opacity: 1;
+  animation: slideLeft 2s ease forwards;
 }
 
 .aboutSection1 {
   display: grid;
   gap: 1vw;
   @include center();
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+}
+
+.aboutSection1.visible {
+  opacity: 1;
+  animation: slideDown 2s ease forwards;
 }
 
 .aboutSection2 {
@@ -160,7 +225,15 @@ main {
 .aboutText {
   margin: 0px 1rem;
   font-size: 20px;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+  &.visible {
+      opacity: 1;
+      animation: slideRight 2s ease forwards;
+    }
 }
+
+/*About end*/
 
 .socialMediaIcons{
   display: flex;

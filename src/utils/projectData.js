@@ -117,12 +117,6 @@ export const Workflow = [
         {id: 2, ability: 'Testing & Debugging'},
     ]
 
-export const descriptionIntro = (
-    <h1>
-        About Me
-    </h1>
-)
-
 export const description = (
     <p>
         You are probably wondering, how did I get here? Well, Back during the pandemic I realized that I needed a career change. I have always been passionate about technology and computers, so I decided to take the plunge and learn web development.
