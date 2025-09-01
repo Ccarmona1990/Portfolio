@@ -27,9 +27,9 @@ export const SocialMediaIcons = (props)=>{
 const Sideoptbar = () => {
     return (
 
-        <section>
-            {<SocialMediaIcons className='socialMediaIcons hide' />}
-            <a className='b-Top hide' href="#top" style={{'--i':5}}>
+        <section className='sideOptBar hide'>
+            {<SocialMediaIcons className='socialMediaIcons' />}
+            <a className='b-Top' href="#top" style={{'--i':5}}>
                 <FontAwesomeIcon icon={faArrowAltCircleUp} size='2x'/>
             </a>
         </section>

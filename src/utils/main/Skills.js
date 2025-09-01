@@ -2,26 +2,21 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {skills, Workflow} from '../projectData'
 import {faCheck} from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
+import { observer } from '../features'
 
 const Skills = () => {
     React.useEffect(()=>{
         const sh1 = document.querySelector('.sh1');
         const sh2 = document.querySelector('.sh2');
         const skillsH1 = document.querySelector('#Skills h1');
+        const allElements = [sh1, sh2, skillsH1];
+        //const allSkills = document.querySelectorAll('.skills-section .subheading, .skills-section h1');
+        
+        allElements.forEach(el => observer.observe(el));        
 
-        const scrollActive = ()=>{
-            const scrollHeight = window.pageYOffset;
-            console.log(scrollHeight);
-            if (scrollHeight > 820){
-            sh1?.classList?.add('visible');
-            sh2?.classList?.add('visible');
-            skillsH1?.classList?.add('visible');
-            }
-        }
-        window.addEventListener('scroll', scrollActive);
         return ()=>{
-            window.removeEventListener('scroll', scrollActive);}
-    },[]);
+            allElements.forEach(el => observer.unobserve(el));       
+        }},[]);
 
     return (
         <section className="skills-section" id="Skills">

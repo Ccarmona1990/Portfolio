@@ -1,22 +1,15 @@
 import React from 'react'
 import {myProjects} from '../projectData'
+import { observer } from '../features'
 
 const Projects = () => {
     React.useEffect(()=>{
-        const projects = document.querySelector('.projects');
-        const projectsTitle = document.querySelector('#Projects h1');
-        const scrollActive = ()=>{
-            const scrollHeight = window.pageYOffset;
-            //console.log(scrollHeight);
-            if (scrollHeight > 1450){
-            projectsTitle?.classList?.add('visible');
-            projects?.classList?.add('visible');
-            }
-        }
-        window.addEventListener('scroll', scrollActive);
+        const allProjectsElements = document.querySelectorAll('#Projects h1, .projects');
+        allProjectsElements.forEach(el => observer.observe(el));
 
         return ()=>{
-            window.removeEventListener('scroll', scrollActive);}
+            allProjectsElements.forEach(el => observer.unobserve(el));
+            }
         },[]);
     return (
         <section id='Projects' >
