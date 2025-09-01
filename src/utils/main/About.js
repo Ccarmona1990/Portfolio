@@ -2,26 +2,15 @@ import { ProfileImg } from '../Masthead'
 import { description } from '../projectData'
 import flynsheet from '../../Images/flynsheet.jpg'
 import React from 'react'
+import { observer } from '../features'
 
 const About =  () =>{
     React.useEffect(()=>{
-        const aboutText = document.querySelector('.aboutText');
-        const profilePicAbout = document.querySelector('.profilePicAbout');
-        const aboutSection1 = document.querySelector('.aboutSection1');
+        const allAboutElements = document.querySelectorAll('.aboutText, .profilePicAbout , .aboutSection1');
+        allAboutElements.forEach(el => observer.observe(el));
         
-        const scrollActive = ()=>{
-            const scrollHeight = window.pageYOffset;
-            
-            if (scrollHeight > 120){
-            aboutText?.classList?.add('visible');
-            profilePicAbout?.classList?.add('visible');
-            aboutSection1?.classList?.add('visible');
-            }
-        }
-        window.addEventListener('scroll', scrollActive);
-
         return ()=>{
-            window.removeEventListener('scroll', scrollActive);}
+            allAboutElements.forEach(el => observer.unobserve(el));}
     },[]);
 
     return (
