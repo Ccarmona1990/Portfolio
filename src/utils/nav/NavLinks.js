@@ -8,7 +8,8 @@ const NavLinks = ({sectionClass, containerClass, itemClass})=>{
                 const path = `#${title}`
                 return (
                     <li key={id} className={itemClass}>
-                        <a className="nav-link" href={path}>{title}</a>
+                        <a className="nav-link" style={{'--i':id}} href={path}>{title}</a>
+                        {/*console.log(id)*/}
                     </li>
                 )
             })}

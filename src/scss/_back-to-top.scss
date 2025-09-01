@@ -5,6 +5,9 @@
   right: 2rem;
   color: map-get($map: $primary-blues, $key:'b5');
   transition: all 0.3s linear;
+  opacity: 0;
+    animation: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .b-Top:hover {

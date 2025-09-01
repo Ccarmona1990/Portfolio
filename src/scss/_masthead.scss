@@ -28,7 +28,14 @@
   border-radius: 50%;
   display: block;  
   margin: 20px;
+  opacity: 0.1;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 0.6s ease;
 }
+.profilePic.visible {
+  opacity: 1;
+  transform: scale(1);}
+
 
 .mastheadBlock {
   display: flex;
@@ -47,14 +54,17 @@
   justify-content: center;
   & h3:first-child{
     animation: slideDown 1s ease forwards;
+    opacity: 0;
   }
   & h3:last-of-type{
   animation: slideUp 1s ease forwards;
+  opacity: 0;
   }
   p {
     width: 70%;
     margin: 10px 0px 10px 0px;
     animation: slideLeft 1s ease forwards;
+    opacity: 0;
   }
 }
 

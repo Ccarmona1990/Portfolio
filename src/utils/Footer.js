@@ -1,4 +1,3 @@
-import React from 'react'
 import ccLogo from '../Images/Logo/fccLogo.png'
 
 const Footer = () => {

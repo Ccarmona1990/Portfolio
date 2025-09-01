@@ -8,23 +8,33 @@ const Nav = () => {
         const top = document.querySelector('#page-top');
         const backToTop = document.querySelector('.b-Top');
         const navLinks = document.querySelectorAll('.nav-link');
+        const socialMediaIcons = document.querySelector('.socialMediaIcons');
 
-        console.log(navLinks);
-        
-
-        window.addEventListener('scroll', ()=>{
+        const scrollActive = ()=>{
             const scrollHeight = window.pageYOffset;
-            if (scrollHeight > 100){
+            //console.log(scrollHeight);
+            if (scrollHeight > 50){
                 top.classList.add('whiteBackground');
+                navLinks.forEach((e)=>e.classList.add('blueLetters'));
+            }  
+            if (scrollHeight > 450) {
                 backToTop?.classList?.remove('hide');
-                navLinks.forEach((e)=>e.classList.add('blueLetters')) ;
-                
-            } else if (scrollHeight < 100){
+                socialMediaIcons?.classList?.remove('hide');
+            } else if (scrollHeight < 50){
                 top?.classList?.remove('whiteBackground');
-                backToTop.classList.add('hide');
-                navLinks.forEach((e)=>e.classList.remove('blueLetters')) ;
+                navLinks.forEach((e)=>e.classList.remove('blueLetters'));
             }
-        })
+            else if (scrollHeight < 450){
+                backToTop.classList.add('hide');
+                socialMediaIcons?.classList?.add('hide');
+            }
+        }
+        //console.log(navLinks);
+
+        window.addEventListener('scroll', scrollActive)
+        return ()=>{
+            window.removeEventListener('scroll', scrollActive);
+        }
     },[]);
 
     

@@ -1,4 +1,3 @@
-import React from 'react'
 import SideOptBar from './main/SideOptBar'
 import About from './main/About'
 import Skills from './main/Skills'

@@ -133,3 +133,51 @@ $shadow-5: 7px 8px 9px -2px rgba(0,0,0,0.75);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.295);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 $box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: transLateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
