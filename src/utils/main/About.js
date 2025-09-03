@@ -1,6 +1,6 @@
 import { ProfileImg } from '../Masthead'
 import { description } from '../projectData'
-import flynsheet from '../../Images/flynsheet.jpg'
+import flynsheet from '../../Images/smiling2.jpg'
 import React from 'react'
 import { observer } from '../features'
 

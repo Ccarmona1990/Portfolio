@@ -1,5 +1,5 @@
 import { MyComponent } from './typed-funct'
-import profilePic from '../Images/smiling2.jpg'
+import profilePic from '../Images/profilePic1.jpg'
 import { SocialMediaIcons } from './main/SideOptBar';
 import React from 'react';
 import { observer } from './features';
